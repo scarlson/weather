@@ -33,7 +33,6 @@ func (e *Engine) GetForecast(latitude, longitude float64) (*Forecast, error) {
 	bytes, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return nil, err
-		panic(err)
 	}
 	f := &Forecast{}
 	err = json.Unmarshal(bytes, f)
